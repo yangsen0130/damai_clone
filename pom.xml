@@ -16,14 +16,14 @@
     <modules>
         <module>damai-common</module>
         <module>damai-redis-tool-framework</module>
-<!--        <module>damai-elasticsearch-framework</module>-->
+        <!--        <module>damai-elasticsearch-framework</module>-->
         <module>damai-id-generator-framework</module>
         <module>damai-spring-cloud-framework</module>
-<!--        <module>damai-thread-pool-framework</module>-->
-<!--        <module>damai-redisson-framework</module>-->
+        <!--        <module>damai-thread-pool-framework</module>-->
+        <!--        <module>damai-redisson-framework</module>-->
         <module>damai-server</module>
         <module>damai-server-client</module>
-<!--        <module>damai-captcha-manage-framework</module>-->
+        <!--        <module>damai-captcha-manage-framework</module>-->
     </modules>
 
     <properties>
@@ -45,8 +45,8 @@
         <maven-resources.version>3.2.0</maven-resources.version>
         <maven-source.version>3.2.1</maven-source.version>
         <flatten-maven.version>1.4.1</flatten-maven.version>
-        <fastjson.version>2.0.9</fastjson.version>
-        <oshi-core.version>6.2.2</oshi-core.version>
+        <!-- <fastjson.version>2.0.9</fastjson.version> --> <!-- Duplicated fastjson.version, using the first one -->
+        <!-- <oshi-core.version>6.2.2</oshi-core.version> --> <!-- Duplicated oshi-core.version -->
         <commons-lang.version>2.6</commons-lang.version>
         <jjwt.version>0.9.1</jjwt.version>
         <hutool.version>5.8.25</hutool.version>
@@ -74,7 +74,8 @@
         <opencsv.version>5.9</opencsv.version>
         <skywalking.apm-toolkit-trace.version>9.4.0</skywalking.apm-toolkit-trace.version>
         <skywalking.apm-toolkit-log4j-2.x.version>9.4.0</skywalking.apm-toolkit-log4j-2.x.version>
-
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -109,4 +110,71 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources.version}</version>
+                <configuration>
+                    <encoding>${project.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source.version}</version>
+                <configuration>
+                    <!--install、deploy时会上传源码jar包到仓库，默认是true-->
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven.version}</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
