@@ -3,7 +3,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <parent>
         <groupId>com.example</groupId>
         <artifactId>damai-server-client</artifactId>
@@ -11,16 +10,9 @@
     </parent>
 
 
-    <artifactId>damai-base-data-client</artifactId>
+    <artifactId>damai-user-client</artifactId>
 
-    <name>base-data-client</name>
+    <name>user-client</name>
     <description>rpc</description>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+
 </project>

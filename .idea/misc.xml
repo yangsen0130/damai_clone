@@ -13,6 +13,10 @@
         <option value="$PROJECT_DIR$/damai-redis-tool-framework/pom.xml" />
         <option value="$PROJECT_DIR$/damai-redis-tool-framework/damai-redis-framework/pom.xml" />
         <option value="$PROJECT_DIR$/damai-id-generator-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-server/damai-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-springcloud-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-springcloud-framework/damai-service-common/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-server-client/damai-user-client/pom.xml" />
       </list>
     </option>
   </component>
