@@ -19,6 +19,18 @@
 
 
     <dependencies>
+        <!--     todo remove if corrected   这里是intellij 里边 一直找不到间接引用 damai-redis-common-framework 所以只能手动引入-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>damai-redis-common-framework</artifactId>
+            <version>${revision}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>damai-service-common</artifactId>

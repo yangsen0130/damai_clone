@@ -1,33 +1,33 @@
-//package com.damai.controller;
-//
-//import com.damai.common.ApiResponse;
-//import com.damai.dto.*;
-//import com.damai.service.UserService;
-//import com.damai.vo.UserGetAndTicketUserListVo;
-//import com.damai.vo.UserLoginVo;
-//import com.damai.vo.UserVo;
-//import io.swagger.v3.oas.annotations.Operation;
-//import io.swagger.v3.oas.annotations.tags.Tag;
-//import jakarta.validation.Valid;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RestController;
-//
-///**
-// * @program: damai
-// * @description: 用户 控制层
-// * @author: yangsen
-// **/
-//@RestController
-//@RequestMapping("/user")
-//@Tag(name = "user", description = "用户")
-//public class UserController {
-//
-//    @Autowired
-//    private UserService userService;
-//
+package com.damai.controller;
+
+import com.damai.common.ApiResponse;
+import com.damai.dto.*;
+import com.damai.service.UserService;
+import com.damai.vo.UserGetAndTicketUserListVo;
+import com.damai.vo.UserLoginVo;
+import com.damai.vo.UserVo;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @program: damai
+ * @description: 用户 控制层
+ * @author: yangsen
+ **/
+@RestController
+@RequestMapping("/user")
+@Tag(name = "user", description = "用户")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
 //    @Operation(summary  = "查询(通过手机号)")
 //    @PostMapping(value = "/get/mobile")
 //    public ApiResponse<UserVo> getByMobile(@Valid @RequestBody UserMobileDto userMobileDto){
@@ -39,13 +39,13 @@
 //    public ApiResponse<UserVo> getById(@Valid @RequestBody UserIdDto userIdDto){
 //        return ApiResponse.ok(userService.getById(userIdDto));
 //    }
-//
-//    @Operation(summary  = "注册")
-//    @PostMapping(value = "/register")
-//    public ApiResponse<Boolean> register(@Valid @RequestBody UserRegisterDto userRegisterDto){
-//        return ApiResponse.ok(userService.register(userRegisterDto));
-//    }
-//
+
+    @Operation(summary  = "注册")
+    @PostMapping(value = "/register")
+    public ApiResponse<Boolean> register(@Valid @RequestBody UserRegisterDto userRegisterDto){
+        return ApiResponse.ok(userService.register(userRegisterDto));
+    }
+
 //    @Operation(summary  = "是否存在")
 //    @PostMapping(value = "/exist")
 //    public ApiResponse<Void> exist(@Valid @RequestBody UserExistDto userExistDto){
@@ -106,6 +106,6 @@
 //    public ApiResponse<UserGetAndTicketUserListVo> getUserAndTicketUserList(@Valid @RequestBody UserGetAndTicketUserListDto userGetAndTicketUserListDto) {
 //        return ApiResponse.ok(userService.getUserAndTicketUserList(userGetAndTicketUserListDto));
 //    }
-//
-//
-//}
+
+
+}
