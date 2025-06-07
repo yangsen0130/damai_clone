@@ -34,19 +34,19 @@ import java.util.Objects;
  **/
 @Service
 public class TicketUserService extends ServiceImpl<TicketUserMapper, TicketUser> {
-
+    
     @Autowired
     private TicketUserMapper ticketUserMapper;
-
+    
     @Autowired
     private UserMapper userMapper;
-
+    
     @Autowired
     private UidGenerator uidGenerator;
-
+    
     @Autowired
     private RedisCache redisCache;
-
+    
     public List<TicketUserVo> list(TicketUserListDto ticketUserListDto) {
         //先从缓存中查询
         List<TicketUserVo> ticketUserVoList = redisCache.getValueIsList(RedisKeyBuild.createRedisKey(
@@ -59,7 +59,7 @@ public class TicketUserService extends ServiceImpl<TicketUserMapper, TicketUser>
         List<TicketUser> ticketUsers = ticketUserMapper.selectList(ticketUserLambdaQueryWrapper);
         return BeanUtil.copyToList(ticketUsers,TicketUserVo.class);
     }
-
+    
     @Transactional(rollbackFor = Exception.class)
     public void add(TicketUserDto ticketUserDto) {
         User user = userMapper.selectById(ticketUserDto.getUserId());
@@ -89,7 +89,7 @@ public class TicketUserService extends ServiceImpl<TicketUserMapper, TicketUser>
         ticketUserMapper.deleteById(ticketUserIdDto.getId());
         delTicketUserVoListCache(String.valueOf(ticketUser.getUserId()));
     }
-
+    
     public void delTicketUserVoListCache(String userId){
         redisCache.del(RedisKeyBuild.createRedisKey(RedisKeyManage.TICKET_USER_LIST, userId));
     }

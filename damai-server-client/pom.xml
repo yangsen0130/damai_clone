@@ -17,13 +17,13 @@
     <description>服务feign接口</description>
 
     <modules>
-<!--        <module>damai-order-client</module>-->
+        <module>damai-order-client</module>
         <module>damai-base-data-client</module>
         <module>damai-user-client</module>
-<!--        <module>damai-job-client</module>-->
-<!--        <module>damai-customize-client</module>-->
-<!--        <module>damai-program-client</module>-->
-<!--        <module>damai-pay-client</module>-->
+        <module>damai-job-client</module>
+        <module>damai-customize-client</module>
+        <module>damai-program-client</module>
+        <module>damai-pay-client</module>
     </modules>
 
 

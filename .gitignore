@@ -1,19 +1,15 @@
+HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+logs/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
-.flattened-pom.xml
+### Agent ###
+cookasyncagent/
+**/dependency-reduced-pom.xml
 
-### Eclipse ###
+### STS ###
 .apt_generated
 .classpath
 .factorypath
@@ -22,6 +18,14 @@ target/
 .springBeans
 .sts4-cache
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.log
+*.hprof
+.flattened-pom.xml
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -34,7 +38,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Mac OS ###
-.DS_Store
-/.sdkmanrc

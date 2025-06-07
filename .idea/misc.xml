@@ -6,7 +6,20 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/damai-redis-tool-framework/damai-redis-common-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-service-delay-queue-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-redisson-common-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-bloom-filter-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-spring-cloud-framework/damai-service-initialize/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-service-lock-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-service-lock-framework/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/damai-redisson-framework/damai-service-delay-queue-framework/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK" />

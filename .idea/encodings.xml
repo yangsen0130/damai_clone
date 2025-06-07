@@ -6,6 +6,18 @@
     <file url="file://$PROJECT_DIR$/damai-redis-tool-framework/damai-redis-common-framework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-redis-tool-framework/damai-redis-framework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-redis-tool-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-bloom-filter-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-bloom-filter-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-redisson-common-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-redisson-common-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-service-lock-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/damai-service-lock-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-redisson-service-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-service-delay-queue-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/damai-service-delay-queue-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-redisson-framework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-server-client/damai-base-data-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-server-client/damai-user-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-server-client/src/main/resources" charset="UTF-8" />
@@ -13,6 +25,8 @@
     <file url="file://$PROJECT_DIR$/damai-server/damai-user-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-spring-cloud-framework/damai-service-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-spring-cloud-framework/damai-service-initialize/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/damai-spring-cloud-framework/damai-service-initialize/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/damai-spring-cloud-framework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
